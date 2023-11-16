@@ -26,6 +26,7 @@ function App() {
     setCart(removeArr);
   };
 
+
   useEffect(() => {
     const basket = JSON.parse(localStorage.getItem("basket"));
     basket ? setCart(basket) : setCart([])
@@ -35,7 +36,8 @@ function App() {
     localStorage.setItem("basket", JSON.stringify(cart));
   }, [cart]);
 
-
+   // eslint-disable-next-line no-unused-vars
+   //const setProducts = /* some value */;
  
   return (
     <ProductContext.Provider value={{products , addItem} } >
